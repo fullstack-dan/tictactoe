@@ -1,5 +1,6 @@
 const body = document.querySelector('body');
 const newGameButton = document.querySelector('#newGame');
+const winner = document.querySelector('#winner');
 const cells = [];
 
 const playerSwitches = document.createElement('div');
@@ -131,8 +132,8 @@ function winGame(player) {
         cell.style.cssText += 'pointer-events: none;'
     }
     if (player == 'X') {
-        alert('Player 1 has won!');
+        winner.textContent = 'Player 1 has won!'
     } else {
-        alert('Player 2 has won!');
+        winner.textContent = 'Player 2 has won!'
     }
 }

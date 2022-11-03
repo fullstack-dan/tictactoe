@@ -24,10 +24,12 @@ body {
 
 #gameboard {
     display: grid;
-    width: 500px;
-    height: 500px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+
+    position: relative;
+    width: 400px;
+    height: 400px;
 }
 
 .cell {
