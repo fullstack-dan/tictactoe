@@ -9,6 +9,51 @@
 
 body {
     background-color: #ddebf3;
-
     font-family: Poppins;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#titleCard {
+    font-size: 200%;
+    padding: 48px;
+}
+
+#gameboard {
+    display: grid;
+    width: 500px;
+    height: 500px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.cell {
+    transition: ease all 0.125s;
+    border-style:solid;
+    border-color: black;
+}
+.cell:hover {
+    background-color: #d2dfe7;
+}
+.cell:active {
+    background-color: #c6d3db;
+}
+
+.cell#zero, .cell#one, .cell#two {
+    border-top-style: none;
+    border-bottom-style: none;
+}
+.cell#zero, .cell#three, .cell#six {
+    border-left-style: none;
+    border-right-style: none;
+}
+.cell#two, .cell#five, .cell#eight {
+    border-right-style: none;
+    border-left-style: none;
+}
+.cell#six, .cell#seven, .cell#eight {
+    border-top-style: none;
+    border-bottom-style: none;
 }
