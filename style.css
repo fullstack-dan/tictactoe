@@ -14,12 +14,12 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 48px;
+    gap: 32px;
 }
 
 #titleCard {
     font-size: 200%;
-    padding-top: 48px;
+    padding-top: 32px;
 }
 
 #gameboard {
@@ -34,9 +34,17 @@ body {
     transition: ease all 0.125s;
     border-style:solid;
     border-color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 500%;
+    color: rgba(0, 0, 0, 0);
 }
 .cell:hover {
     background-color: #d2dfe7;
+    color: rgba(0, 0, 0, 0.244);
 }
 .cell:active {
     background-color: #c6d3db;
@@ -57,4 +65,37 @@ body {
 .cell#cell6, .cell#cell7, .cell#cell8 {
     border-top-style: none;
     border-bottom-style: none;
+}
+
+#playerSwitches {
+    display: flex;
+    background-color: grey;
+    border-radius: 5px;
+}
+#playerSwitches *{
+    transition: ease all 0.125s;
+    color: white;
+    padding: 8px;
+}
+
+.currentPlayer#p1 {
+    background-color: red;
+    border-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.currentPlayer#p2 {
+    background-color: blue;
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.p1cell, .p1cell:hover {
+    background-color: #e3adad;
+    color: rgba(255, 0, 0, 0.73);
+}
+.p2cell, .p2cell:hover {
+    background-color: #afade3;
+    color: rgba(0, 0, 255, 0.73);
 }
