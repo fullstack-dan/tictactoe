@@ -92,10 +92,30 @@ body {
 }
 
 .p1cell, .p1cell:hover {
+    pointer-events: none;
     background-color: #e3adad;
     color: rgba(255, 0, 0, 0.73);
 }
 .p2cell, .p2cell:hover {
+    pointer-events: none;
     background-color: #afade3;
     color: rgba(0, 0, 255, 0.73);
 }
+
+ .winner {
+    background-color: #aee3ad;
+    color: rgba(1, 86, 1, 0.73);
+ }
+
+ .winner#p2 {
+    background-color: rgba(1, 86, 1, 0.73);
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+ }
+ .winner#p1 {
+    background-color: rgba(1, 86, 1, 0.73);
+    border-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+ }
