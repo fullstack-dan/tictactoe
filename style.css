@@ -14,11 +14,12 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    gap: 48px;
 }
 
 #titleCard {
     font-size: 200%;
-    padding: 48px;
+    padding-top: 48px;
 }
 
 #gameboard {
@@ -41,19 +42,19 @@ body {
     background-color: #c6d3db;
 }
 
-.cell#zero, .cell#one, .cell#two {
+.cell#cell0, .cell#cell1, .cell#cell2 {
     border-top-style: none;
     border-bottom-style: none;
 }
-.cell#zero, .cell#three, .cell#six {
+.cell#cell0, .cell#cell3, .cell#cell6 {
     border-left-style: none;
     border-right-style: none;
 }
-.cell#two, .cell#five, .cell#eight {
+.cell#cell2, .cell#cell5, .cell#cell8 {
     border-right-style: none;
     border-left-style: none;
 }
-.cell#six, .cell#seven, .cell#eight {
+.cell#cell6, .cell#cell7, .cell#cell8 {
     border-top-style: none;
     border-bottom-style: none;
 }
