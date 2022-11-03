@@ -37,13 +37,16 @@ const Player = (token) => {
             win = true;
         }
         if (win) {
-            winGame(thistoken);
             return true;
         } else return false;
     }
+    const getToken = () => {
+        return thistoken;
+    }
     return {
         captureCell,
-        checkWin
+        checkWin,
+        getToken
     }
 }
 
@@ -100,9 +103,10 @@ function playGame(p1, p2) {
                 if (p1.checkWin()) {
                     for (let cell of cells) {
                         if (cell.classList.contains('p1cell')) cell.classList.add('winner');
-                        p2Switch.classList.remove('currentPlayer');
-                        p1Switch.classList.add('winner');
                     }
+                    winGame(p1.getToken);
+                    p2Switch.classList.remove('currentPlayer');
+                    p1Switch.classList.add('winner');
                 }
             } else {
                 cell.classList.add('p2cell');
@@ -118,9 +122,10 @@ function playGame(p1, p2) {
                 if (p2.checkWin()) {
                     for (let cell of cells) {
                         if (cell.classList.contains('p2cell')) cell.classList.add('winner');
-                        p1Switch.classList.remove('currentPlayer');
-                        p2Switch.classList.add('winner');
                     }
+                    winGame(p2.getToken);
+                    p1Switch.classList.remove('currentPlayer');
+                    p2Switch.classList.add('winner');
                 }
             }
         })
